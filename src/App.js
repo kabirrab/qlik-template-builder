@@ -1,23 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+import Header from './components/Header'
+
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+  const urlSearchParams = new URLSearchParams(window.location.search);
+  const parameterObject = Object.fromEntries(urlSearchParams.entries());
+  let queryOptions = []
+  for (var key in parameterObject) {
+    if (!parameterObject.hasOwnProperty(key)) continue;
+    let parameterKey = key;
+    let parameterValue = parameterObject[key];
+    let newParameterObject = {
+      name: parameterKey,
+      value: parameterValue
+    };
+    queryOptions.push(newParameterObject);    
+  };
+  return (       
+    <div className = "container" >
+      <Header />
+      <div>
+        <ul>
+          {queryOptions.map(function(queryOptions, index){
+            return <li key={ index }>{queryOptions.name} : {queryOptions.value} </li>;
+          })}
+        </ul>
+      </div>
     </div>
   );
 }
