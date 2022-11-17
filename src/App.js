@@ -19,11 +19,20 @@ function App() {
     <div className = "container" >
       <Header />
       <div>
-        <ul>
-          {queryOptions.map(function(queryOptions, index){
-            return <li key={ index }>{queryOptions.name} : {queryOptions.value} </li>;
-          })}
-        </ul>
+        <h2>
+          Template builder completed with { 
+            queryOptions.filter(queryOptions => queryOptions.name === 'status')
+            .map((queryOptions,index) => <b key={index} className={queryOptions.value == 'success' ? 'success' : 'failed'} >{queryOptions.value}</b>) 
+          }
+        </h2>
+      </div>
+      <div>
+        <ol>          
+          { 
+            queryOptions.filter(queryOptions => queryOptions.name != 'status')
+            .map((queryOptions, index) => <li key={ index }>{queryOptions.name} : {queryOptions.value} </li>) 
+          }
+        </ol>
       </div>
     </div>
   );
