@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/qlik-template-builder/static/css/main.9976278e.css",
-    "main.js": "/qlik-template-builder/static/js/main.833a8570.js",
+    "main.css": "/qlik-template-builder/static/css/main.967e3240.css",
+    "main.js": "/qlik-template-builder/static/js/main.37ad770b.js",
     "static/js/787.95373390.chunk.js": "/qlik-template-builder/static/js/787.95373390.chunk.js",
     "index.html": "/qlik-template-builder/index.html",
-    "main.9976278e.css.map": "/qlik-template-builder/static/css/main.9976278e.css.map",
-    "main.833a8570.js.map": "/qlik-template-builder/static/js/main.833a8570.js.map",
+    "main.967e3240.css.map": "/qlik-template-builder/static/css/main.967e3240.css.map",
+    "main.37ad770b.js.map": "/qlik-template-builder/static/js/main.37ad770b.js.map",
     "787.95373390.chunk.js.map": "/qlik-template-builder/static/js/787.95373390.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.9976278e.css",
-    "static/js/main.833a8570.js"
+    "static/css/main.967e3240.css",
+    "static/js/main.37ad770b.js"
   ]
 }
